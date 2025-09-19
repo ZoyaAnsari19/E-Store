@@ -1,0 +1,52 @@
+.footer {
+  background-color: #f8f8f8;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.links a {
+  color: #333;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 640px) {
+  .footer {
+    padding: 10px 0;
+  }
+  .links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .links a {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 5px 0;
+  }
+  .links a {
+    font-size: 0.75rem;
+  }
+}
