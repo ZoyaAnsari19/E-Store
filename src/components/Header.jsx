@@ -8,16 +8,46 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <Container className={styles.container}>
+        {/* Mobile menu checkbox for CSS-only toggle */}
+        <input type="checkbox" id="mobile-menu-toggle" className={styles.mobileMenuCheckbox} />
+        <label htmlFor="mobile-menu-toggle" className={styles.mobileMenuToggle}>
+          <span className={styles.hamburger}></span>
+          <span className={styles.hamburger}></span>
+          <span className={styles.hamburger}></span>
+        </label>
+
         <div className={styles.logo}>
           <span>E-Store<b style={{color: "#000"}}>.</b></span>
         </div>
+        
         <div className={styles.searchBar}>
           <input type='text' placeholder='Search for products...' className={styles.searchInput} />
           <button className={styles.searchButton}>
             <FiSearch size={18} />
           </button>
         </div>
+        
         <NavBar />
+
+        {/* Mobile Navigation Menu */}
+        <div className={styles.mobileNav}>
+          <ul className={styles.mobileNavLinks}>
+            <li className={styles.mobileNavLink}>
+              <Link href="/">Home</Link>
+            </li>
+            <li className={styles.mobileNavLink}>
+              <Link href="/store">Store</Link>
+            </li>
+            <li className={styles.mobileNavLink}>
+              <Link href="/cart">
+                <div className={styles.mobileCartLink}>
+                  <FiShoppingCart size={20} />
+                  <span>Cart (3)</span>
+                </div>
+              </Link>
+            </li>
+          </ul>
+        </div>
       </Container>
     </header>
   );
